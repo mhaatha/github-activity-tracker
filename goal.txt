@@ -12,19 +12,3 @@ Langkah-langkah yang harus dilakukan:
 4. Menambahkan CSS dan JS pada Front-End jika perlu
 5. Hosting Back-End di DOMCloud
 6. Hosting Front-End di Vercel
-
-
-GitHub Activity Tracker
-Membuat sebuah website untuk mengambil data dari GitHub berupa activity berdasarkan username.
-
-- Tampilan Front-End berupa sebuah input yang menerima username
-- Front-End memanggil API dari Back-End yang mengharapkan response berupa aktivitas-aktivitas yang dilakukan oleh username tersebut
-
-Langkah-langkah yang harus dilakukan:
-1. Membuat API Spec
-2. Membuat Front-End sederhana yang hanya terdapat input untuk username yang akan hit API dari API Spec
-3. Coding Back-End dengan prod dan dev environment serta fitur-fitur tambahan yang diperlukan
-4. Menambahkan CSS dan JS pada Front-End jika perlu
-5. Hosting Back-End di DOMCloud
-6. Hosting Front-End di Vercel
-

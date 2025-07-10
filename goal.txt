@@ -6,7 +6,7 @@ Membuat sebuah website untuk mengambil data dari GitHub berupa activity berdasar
 - Menggunakan OAuth agar token yang digunakan untuk request ke GitHub API merupakan token dari akun github user dan tidak membebani kerja server
 
 Langkah-langkah yang harus dilakukan:
-1. Membuat API Spec
+1. Membuat API Spec ✅
 2. Membuat Front-End sederhana yang hanya terdapat input untuk username yang akan hit API dari API Spec
 3. Coding Back-End dengan prod dan dev environment serta fitur-fitur tambahan yang diperlukan
 4. Menambahkan CSS dan JS pada Front-End jika perlu

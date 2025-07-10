@@ -1,0 +1,95 @@
+openapi: '3.0.3'
+info:
+  title: GitHub Activity Tracker
+  description: GitHub Activity Tracker API
+  version: '1.0.0'
+servers:
+  - url: http://127.0.0.1:5000
+    description: Development
+tags:
+  - name: Activity API
+    description: Everything about activities
+paths:
+  /v1/activities/{username}:
+    get:
+      summary: Get activities by GitHub username
+      operationId: getActivities
+      tags:
+        - Activity API
+      parameters:
+        - name: username
+          in: path
+          description: Valid GitHub username
+          required: true
+          schema:
+            type: string
+            maxLength: 100
+      responses:
+        '200':
+          description: Success get activities by GitHub username
+          content:
+            application/json:
+              schema: 
+                type: object
+                properties:
+                  message:
+                    type: string
+                  data:
+                    type: object
+                    properties:
+                      activities:
+                        type: array
+                        items:
+                          type: string
+        '401':
+          $ref: "#/components/responses/UnauthorizedError"
+        '403':
+          $ref: '#/components/responses/RestrictedError'
+        '404':
+          $ref: '#/components/responses/NotFoundError'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+
+components:
+  responses:
+    UnauthorizedError:
+      description: Unauthorized
+      content:
+        application/json:
+          schema: 
+            $ref: '#/components/schemas/ErrorResponse'
+    RestrictedError:
+      description: Restricted
+      content:
+        application/json:
+          schema: 
+            $ref: '#/components/schemas/ErrorResponse'
+    NotFoundError:
+      description: Not Found
+      content:
+        application/json:
+          schema: 
+            $ref: '#/components/schemas/ErrorResponse'
+    InternalServerError:
+      description: Internal Server Error
+      content:
+        application/json:
+          schema: 
+            $ref: '#/components/schemas/ErrorResponse'
+  
+  schemas: 
+    ErrorResponse:
+      type: object
+      properties:
+        error:
+          type: object
+          properties:
+            message:
+              type: string
+            details:
+              type: string
+    
+        
+        
+
+                  

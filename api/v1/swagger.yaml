@@ -3,6 +3,9 @@ info:
   title: GitHub Activity Tracker
   description: GitHub Activity Tracker API
   version: '1.0.0'
+  license:
+    name: MIT license
+    url: https://mit-license.org/
 servers:
   - url: http://127.0.0.1:5000
     description: Development
